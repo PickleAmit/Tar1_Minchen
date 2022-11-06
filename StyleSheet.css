@@ -1,0 +1,628 @@
+﻿body {
+    text-align: center;
+    display: block;
+    margin: 8px;
+    font-family: "Monterrat",sans-serif;
+    overflow: auto;
+}
+
+div {
+    display: block;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+label {
+    cursor: default;
+}
+
+img {
+    width: -webkit-fill-available;
+}
+
+#newElement {
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+
+h1 {
+    padding: 22px;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+#newElement button {
+    cursor: pointer;
+    font-size: 18px;
+    width: 150px;
+    height: 150px;
+    background: salmon;
+    border: none;
+    padding: 50px 10px;
+    border-radius: 50%;
+    transition-duration: 1s;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+}
+
+#simpleForm {
+    display: none;
+}
+
+    #simpleForm #formGrid {
+        display: grid;
+        grid-template-columns: 150px 150px 150px;
+        gap: 5px;
+        -webkit-box-pack: center;
+        text-align: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+
+
+#newElement {
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+#simpleForm #formGrid label {
+    border: 1px solid;
+    border-radius: 1%;
+    padding: 20px;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 250px;
+    gap: 15px;
+    text-align: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+    #main div {
+        border: 1px solid;
+        border-radius: 1%;
+        padding: 20px;
+        box-shadow: 0px 0px 79px 0px rgb(0 0 0);
+    }
+
+.modal {
+    display: none;
+    position: fixed;
+    overflow: auto;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+    .modal-content #popupElements {
+        display: grid;
+        grid-template-columns: 150px 150px 150px;
+        gap: 5px;
+        -webkit-box-pack: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+        .modal-content #popupElements div {
+            border: 1px solid;
+            border-radius: 1%;
+            padding: 20px;
+        }
+
+.btnClose:hover,
+.btnClose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*Experiment css*/
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    #main {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 250px 250px 250px;
+        grid-template-columns: 250px 250px 250px;
+        gap: 15px;
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+        #main div {
+            border: 1px solid;
+            border-radius: 1%;
+            padding: 20px;
+            -webkit-box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+        }
+
+            #main div button {
+                font: 1em "Montserrat", sans-serif;
+                cursor: pointer;
+                padding: 12px;
+                -webkit-transition-duration: 1s;
+                transition-duration: 1s;
+                background-color: lightgrey;
+                border: none;
+            }
+
+                #main div button:hover {
+                    border: 1px solid;
+                    color: white;
+                    background-color: #878787;
+                    -webkit-box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+                    box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+                }
+
+    #simpleForm {
+        display: none;
+        text-align: center;
+        margin: 20px;
+    }
+
+        #simpleForm button {
+            font: 1em "Montserrat", sans-serif;
+            cursor: pointer;
+            padding: 12px;
+            -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+            background-color: lightgrey;
+            border: none;
+        }
+
+            #simpleForm button:hover {
+                border: 1px solid;
+                color: white;
+                background-color: #878787;
+                -webkit-box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+                box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+            }
+
+        #simpleForm #formGrid {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 150px 150px 150px;
+            grid-template-columns: 150px 150px 150px;
+            gap: 5px;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #main {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 250px 250px 250px;
+        grid-template-columns: 250px 250px 250px;
+        gap: 15px;
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+        #main div {
+            border: 1px solid;
+            border-radius: 1%;
+            padding: 20px;
+            -webkit-box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+        }
+
+            #main div button {
+                font: 1em "Montserrat", sans-serif;
+                cursor: pointer;
+                padding: 12px;
+                -webkit-transition-duration: 1s;
+                transition-duration: 1s;
+                background-color: lightgrey;
+                border: none;
+            }
+
+                #main div button:hover {
+                    border: 1px solid;
+                    color: white;
+                    background-color: #878787;
+                    -webkit-box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+                    box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+                }
+
+    #simpleForm {
+        display: none;
+        text-align: center;
+        margin: 20px;
+    }
+
+        #simpleForm button {
+            font: 1em "Montserrat", sans-serif;
+            cursor: pointer;
+            padding: 12px;
+            -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+            background-color: lightgrey;
+            border: none;
+        }
+
+            #simpleForm button:hover {
+                border: 1px solid;
+                color: white;
+                background-color: #878787;
+                -webkit-box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+                box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+            }
+
+        #simpleForm #formGrid {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 150px 150px 150px;
+            grid-template-columns: 150px 150px 150px;
+            gap: 5px;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #main {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 250px 250px 250px;
+        grid-template-columns: 250px 250px 250px;
+        gap: 15px;
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+        #main div {
+            border: 1px solid;
+            border-radius: 1%;
+            padding: 20px;
+            -webkit-box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+        }
+
+            #main div button {
+                font: 1em "Montserrat", sans-serif;
+                cursor: pointer;
+                padding: 12px;
+                -webkit-transition-duration: 1s;
+                transition-duration: 1s;
+                background-color: lightgrey;
+                border: none;
+            }
+
+                #main div button:hover {
+                    border: 1px solid;
+                    color: white;
+                    background-color: #878787;
+                    -webkit-box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+                    box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+                }
+
+    #simpleForm {
+        display: none;
+        text-align: center;
+        margin: 20px;
+    }
+
+        #simpleForm button {
+            font: 1em "Montserrat", sans-serif;
+            cursor: pointer;
+            padding: 12px;
+            -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+            background-color: lightgrey;
+            border: none;
+        }
+
+            #simpleForm button:hover {
+                border: 1px solid;
+                color: white;
+                background-color: #878787;
+                -webkit-box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+                box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+            }
+
+        #simpleForm #formGrid {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 150px 150px 150px;
+            grid-template-columns: 150px 150px 150px;
+            gap: 5px;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+@media (min-width: 481px) and (max-width: 767px) {
+    #main {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 250px;
+        grid-template-columns: 250px;
+        gap: 15px;
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+        #main div {
+            border: 1px solid;
+            border-radius: 1%;
+            padding: 20px;
+            -webkit-box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+        }
+
+            #main div button {
+                font: 1em "Montserrat", sans-serif;
+                cursor: pointer;
+                padding: 12px;
+                -webkit-transition-duration: 1s;
+                transition-duration: 1s;
+                background-color: lightgrey;
+                border: none;
+            }
+
+                #main div button:hover {
+                    border: 1px solid;
+                    color: white;
+                    background-color: #878787;
+                    -webkit-box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+                    box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+                }
+
+    #simpleForm {
+        display: none;
+        text-align: center;
+        margin: 20px;
+    }
+
+        #simpleForm button {
+            font: 1em "Montserrat", sans-serif;
+            cursor: pointer;
+            padding: 12px;
+            -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+            background-color: lightgrey;
+            border: none;
+        }
+
+            #simpleForm button:hover {
+                border: 1px solid;
+                color: white;
+                background-color: #878787;
+                -webkit-box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+                box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+            }
+
+        #simpleForm #formGrid {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 150px;
+            grid-template-columns: 150px;
+            gap: 5px;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        /* Could be more or less, depending on screen size */
+    }
+
+        .modal-content #popupElements {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 150px;
+            grid-template-columns: 150px;
+            gap: 5px;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+            .modal-content #popupElements div {
+                border: 1px solid;
+                border-radius: 1%;
+                padding: 20px;
+            }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+@media (min-width: 320px) and (max-width: 480px) {
+    #main {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 250px;
+        grid-template-columns: 250px;
+        gap: 15px;
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+        #main div {
+            border: 1px solid;
+            border-radius: 1%;
+            padding: 20px;
+            -webkit-box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+        }
+
+            #main div button {
+                font: 1em "Montserrat", sans-serif;
+                cursor: pointer;
+                padding: 12px;
+                -webkit-transition-duration: 1s;
+                transition-duration: 1s;
+                background-color: lightgrey;
+                border: none;
+            }
+
+                #main div button:hover {
+                    border: 1px solid;
+                    color: white;
+                    background-color: #878787;
+                    -webkit-box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+                    box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+                }
+
+    #simpleForm {
+        display: none;
+        text-align: center;
+        margin: 20px;
+    }
+
+        #simpleForm button {
+            font: 1em "Montserrat", sans-serif;
+            cursor: pointer;
+            padding: 12px;
+            -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+            background-color: lightgrey;
+            border: none;
+        }
+
+            #simpleForm button:hover {
+                border: 1px solid;
+                color: white;
+                background-color: #878787;
+                -webkit-box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+                box-shadow: 0px 0px 79px 0px rgba(0, 0, 0, 0.75);
+            }
+
+        #simpleForm #formGrid {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 150px;
+            grid-template-columns: 150px;
+            gap: 5px;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        /* Could be more or less, depending on screen size */
+    }
+
+        .modal-content #popupElements {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 150px;
+            grid-template-columns: 150px;
+            gap: 5px;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+            .modal-content #popupElements div {
+                border: 1px solid;
+                border-radius: 1%;
+                padding: 20px;
+            }
+}
